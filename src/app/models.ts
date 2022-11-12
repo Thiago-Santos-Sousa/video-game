@@ -1,4 +1,6 @@
 export interface Game{
+  metacritic: number;
+  id: string;
   background_image: string;
   name: string;
   released: string;
@@ -13,18 +15,19 @@ export interface Game{
   trailers: Array<Trailer>;
 }
 
-
 export interface APIResponse<T> {
-  results: Array<T>
+  results: Array<T>;
 }
 
 interface Genre{
+  id: Number;
   name: string;
 }
 
 interface ParentPlatform{
   platform: {
     name: string;
+    slug:string;
   };
 }
 
